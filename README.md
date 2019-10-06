@@ -54,15 +54,34 @@ y listo!.
 Para poder usar esta libreria es necesario:
 Si lo prefiere puede usar el codigo depruebas y modificar los valores a su necesidad, o puede importar las librerias a su  archivo creado o crear uno nuevo.
 
-![myimage-alt-tag](https://scontent-bog1-1.xx.fbcdn.net/v/t1.15752-9/71843673_440177066683469_5991082127804858368_n.png?_nc_cat=111&_nc_oc=AQnxII9gJV_fLRvidbgSfIOD9rFmKuFYEquhh7irBMmseF71IPX-G54oqJI3if9pQ3A&_nc_ht=scontent-bog1-1.xx&oh=c1b8cd68a2e6f4f261d5c870e4403a70&oe=5E3732EC) 
+![myimage-alt-tag](https://scontent.fbog2-2.fna.fbcdn.net/v/t1.15752-9/71401851_1707362362728247_8866192136928755712_n.png?_nc_cat=104&_nc_oc=AQnHpdESvbgt-YHXoK6oIFEnzznj87EjTA2eoR6ITt30Z7oUdbAKptUBxJgJyfZOHzw&_nc_ht=scontent.fbog2-2.fna&oh=32bf12334222607895f0b99eb322ab5d&oe=5E2D3CF3) 
 
 
 # Ejecutando las pruebas ⚙️
-![myimage-alt-tag](https://scontent-bog1-1.xx.fbcdn.net/v/t1.15752-9/71056822_2372414239692893_8796974929317724160_n.png?_nc_cat=107&_nc_oc=AQnxxKZxfDKNnTtRb7C7eWKHYEAEdA2K2HcZYb26oOFbhMuXHbqxi1s8eh25obYUSnQ&_nc_ht=scontent-bog1-1.xx&oh=a2292a87113e6bf2af5f086ea2fe7361&oe=5E374446) 
+![myimage-alt-tag](https://scontent.fbog2-1.fna.fbcdn.net/v/t1.15752-9/72209269_405494757032656_6677285436324315136_n.png?_nc_cat=102&_nc_oc=AQnVwvVIiYBZMvdC36vzXQBbPOlU08I_gG8fUtb6hg1cKT28KXZxqWZFePFH30lPtKM&_nc_ht=scontent.fbog2-1.fna&oh=d7db3c9444cfd3bc255f93fd8541a848&oe=5E32CD46) 
 
 
-![myimage-alt-tag](https://scontent-bog1-1.xx.fbcdn.net/v/t1.15752-9/70761707_682192895613485_8970786002314461184_n.png?_nc_cat=108&_nc_oc=AQnEM5LExX-nD9XvqGRQ6eYvxyioB_lxbcA2BNy1eXX5NFXiDo23a_SDX3TMs4CcC7k&_nc_ht=scontent-bog1-1.xx&oh=0379683216afe39ff016102489095870&oe=5E0240A1) 
+![myimage-alt-tag](https://scontent.fbog2-3.fna.fbcdn.net/v/t1.15752-9/71701890_410168889646315_9105454847909429248_n.png?_nc_cat=111&_nc_oc=AQkvYinrQkJsb6tuEsK_HcIN8xvbKrUN-ZDq9yp8-KmtE_MGRNA7o32IXQAt2md7EBg&_nc_ht=scontent.fbog2-3.fna&oh=97ac30abd292aa080936b6249b527ec1&oe=5E2DEE06) 
+# ...Expliacion:
+**position**
+Al simulador se le ingresa un un vector, el cual es el primer argumento de la funcion "position" y la posicion que  precisamente es el segundo argumento, la respuesta correcta a la consulta de la probabilidad de estar en tal posicion se muestra antes de la llamada a la funcion.
 
+     def test1(self):
+        self.assertEqual(0.05263157894736842,
+                         
+                         position([(-3,-1),
+                                   (0,-2),
+                                   (0,1),
+                                   (2,0)],     2))
+**transition**
+Al simulador se le ingresa dos ket, siendo los dos argumentos de la funcion "transition" la respuesta correcta a la consulta de  la probabilidad de transitar del primer vector al segundo, se muestra antes de la llamada a la funcion.
+    
+        def test2(self):
+        self.assertEqual((0,-0.9999999999999998),
+                         
+                         transition([(0,-1),
+                                     (1,0)],    [(1,0),
+                                                 (0,-1)]))
 
 # Ejemplo1:
 
