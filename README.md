@@ -64,7 +64,8 @@ Si lo prefiere puede usar el codigo depruebas y modificar los valores a su neces
 ![myimage-alt-tag](https://scontent.fbog2-3.fna.fbcdn.net/v/t1.15752-9/71701890_410168889646315_9105454847909429248_n.png?_nc_cat=111&_nc_oc=AQkvYinrQkJsb6tuEsK_HcIN8xvbKrUN-ZDq9yp8-KmtE_MGRNA7o32IXQAt2md7EBg&_nc_ht=scontent.fbog2-3.fna&oh=97ac30abd292aa080936b6249b527ec1&oe=5E2DEE06) 
 # ...Expliacion:
 **position**
-Al simulador se le ingresa un un vector, el cual es el primer argumento de la funcion "position" y la posicion cuyo lugar es como segundo argumento de la funcion. La respuesta correcta a la consulta de: "la probabilidad de estar en una posicion particular", se muestra antes de la llamada a la funcion.
+Al simulador se le ingresa un un vector, el cual es el primer argumento de la funcion "position" y la posicion cuyo lugar es como segundo argumento de la funcion. La respuesta correcta a la consulta de: 
+"la probabilidad de estar en una posicion particular", se muestra antes de la llamada a la funcion.
 
      def test1(self):
         self.assertEqual(0.05263157894736842,
