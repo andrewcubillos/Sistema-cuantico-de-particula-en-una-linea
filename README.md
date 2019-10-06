@@ -64,7 +64,7 @@ Si lo prefiere puede usar el codigo depruebas y modificar los valores a su neces
 ![myimage-alt-tag](https://scontent.fbog2-3.fna.fbcdn.net/v/t1.15752-9/71701890_410168889646315_9105454847909429248_n.png?_nc_cat=111&_nc_oc=AQkvYinrQkJsb6tuEsK_HcIN8xvbKrUN-ZDq9yp8-KmtE_MGRNA7o32IXQAt2md7EBg&_nc_ht=scontent.fbog2-3.fna&oh=97ac30abd292aa080936b6249b527ec1&oe=5E2DEE06) 
 # ...Expliacion:
 **position**
-Al simulador se le ingresa un un vector, el cual es el primer argumento de la funcion "position" y la posicion que  precisamente es el segundo argumento, la respuesta correcta a la consulta de la probabilidad de estar en tal posicion se muestra antes de la llamada a la funcion.
+Al simulador se le ingresa un un vector, el cual es el primer argumento de la funcion "position" y la posicion cuyo lugar es como segundo argumento de la funcion. La respuesta correcta a la consulta de: "la probabilidad de estar en una posicion particular", se muestra antes de la llamada a la funcion.
 
      def test1(self):
         self.assertEqual(0.05263157894736842,
@@ -74,7 +74,9 @@ Al simulador se le ingresa un un vector, el cual es el primer argumento de la fu
                                    (0,1),
                                    (2,0)],     2))
 **transition**
-Al simulador se le ingresa dos ket, siendo los dos argumentos de la funcion "transition" la respuesta correcta a la consulta de  la probabilidad de transitar del primer vector al segundo, se muestra antes de la llamada a la funcion.
+
+Al simulador se le ingresa dos ket, siendo los dos argumentos de la funcion "transition" la respuesta correcta a la consulta de:  
+"la probabilidad de transitar del primer vector al segundo", se muestra antes de la llamada a la funcion.
     
         def test2(self):
         self.assertEqual((0,-0.9999999999999998),
@@ -85,46 +87,38 @@ Al simulador se le ingresa dos ket, siendo los dos argumentos de la funcion "tra
 
 # Ejemplo1:
 
-    def stateprobabilistic(X,Y,n):
-    result =[[0 for x in range(len(Y[0]))] for y in range(len(Y))]
-    p=X
-    result2=[[0 for x in range(len(p[0]))] for y in range(len(p))]
+    def position(V,p):
+    raiz=0
     
-    for h in range(n-1):
-        for i in range(len(X)):
-           
-           for j in range(len(p[0])):
-               
-               for k in range(len(p)):
-                   result2[i][j] += X[i][k] * p[k][j]
-                   
-                        
+    for i in V:
+        raiz+=(i[0]**2)+(i[1]**2)
+        
+    prob =((V[p][0]**2)+(V[p][1]**2))/raiz
+    
+    return prob
 
-    for i in range(len(result2)):
-       
-       for j in range(len(Y[0])):
-           
-           for k in range(len(Y)):
-               result[i][j] += result2[i][k] * Y[k][j]
-         
-    return result
-# Ejemplo2:         
-    def state(X,Y,n):
-                
-    result =[[0 for x in range(len(Y[0]))] for y in range(len(Y))]
-    for h in range(n-1):
-        for i in range(len(X)):
-           
-           for j in range(len(Y[0])):
-               
-               for k in range(len(Y)):
-            
-                   
-                   result[i][j] += X[i][k] * Y[k][j]
-            
-        Y=result
-     
-    return result 
+# Ejemplo2:
+
+    def transition(V1,V2):
+        total=(0,0)
+        norm1=0
+        norm2=0
+        for z,y in zip(V1,V2):
+            total=suma(total,producto(z,y))
+            norm1+=(z[0]**2)+(z[1]**2)
+            norm2+=(y[0]**2)+(y[1]**2)
+        
+        norm1f=norm1**(1/2)
+
+        norm2f=norm2**(1/2)
+
+
+        deno=norm1f*norm2f
+        
+        return((total[0]/deno),(total[1]/deno))
+  
+
+
 
 
 
