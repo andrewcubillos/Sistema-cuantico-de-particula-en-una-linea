@@ -68,35 +68,35 @@ Al simulador se le ingresa un un vector, el cual es el primer argumento de la fu
       "la probabilidad de estar en una posicion particular", se muestra antes de la llamada a la funcion.
 
      def test1(self):
-        self.assertEqual(0.05263157894736842,
-                         
-                         position([(-3,-1),
-                                   (0,-2),
-                                   (0,1),
-                                   (2,0)],     2))
+         self.assertEqual(0.05263157894736842,
+
+                          position([(-3,-1),
+                                    (0,-2),
+                                    (0,1),
+                                    (2,0)],     2))
 **transition**
 
 Al simulador se le ingresa dos ket, siendo los dos argumentos de la funcion "transition" la respuesta correcta a la consulta de:  
 "la probabilidad de transitar del primer vector al segundo", se muestra antes de la llamada a la funcion.
     
         def test2(self):
-        self.assertEqual((0,-0.9999999999999998),
-                         
-                         transition([(0,-1),
-                                     (1,0)],    [(1,0),
-                                                 (0,-1)]))
+            self.assertEqual((0,-0.9999999999999998),
+
+                             transition([(0,-1),
+                                         (1,0)],    [(1,0),
+                                                     (0,-1)]))
 
 # Ejemplo1:
 
     def position(V,p):
-    raiz=0
-    
-    for i in V:
-        raiz+=(i[0]**2)+(i[1]**2)
-        
-    prob =((V[p][0]**2)+(V[p][1]**2))/raiz
-    
-    return prob
+        raiz=0
+
+        for i in V:
+            raiz+=(i[0]**2)+(i[1]**2)
+
+        prob =((V[p][0]**2)+(V[p][1]**2))/raiz
+
+        return prob
 
 # Ejemplo2:
 
