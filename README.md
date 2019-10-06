@@ -65,7 +65,7 @@ Si lo prefiere puede usar el codigo depruebas y modificar los valores a su neces
 # ...Expliacion:
 **position**
 Al simulador se le ingresa un un vector, el cual es el primer argumento de la funcion "position" y la posicion cuyo lugar es como segundo argumento de la funcion. La respuesta correcta a la consulta de: 
-"la probabilidad de estar en una posicion particular", se muestra antes de la llamada a la funcion.
+      "la probabilidad de estar en una posicion particular", se muestra antes de la llamada a la funcion.
 
      def test1(self):
         self.assertEqual(0.05263157894736842,
