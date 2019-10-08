@@ -1,16 +1,13 @@
 # Sistema-cuantico-de-particula-en-una-linea
 
 
-**Sistemas Clasicos Deterministicos:**
-Muestra el estado de un sistema clasico, despues de ciertos clicks de tiempo.
+**Estados Cuannticos:**
+Muestra la probabilidad de que una partícula se pueda encontrar en una posicion determinada.
 
-**Sistema Probabilistco:**
 
-Muestra la probabilidad de que un elemento se encuentre en algun estado del sistema, despues de determinados clicks de tiempo.
+**Amplitud de transicion**
 
-**Sistema Cuantico:**
-
-Muestra la probabilidad de que una particula,foton,electron se encuentre en algun estado del sistema, despues de determinados clicks de tiempo.
+Muestra la probabilidad de transitar de un primer vector ket a otro vector ket.
 
 
 
