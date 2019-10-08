@@ -2,10 +2,11 @@
 
 
 **Estados Cuannticos:**
+
 Muestra la probabilidad de que una partícula se pueda encontrar en una posicion determinada.
 
 
-**Amplitud de transicion**
+**Amplitud de transicion:**
 
 Muestra la probabilidad de transitar de un primer vector ket a otro vector ket.
 
